@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เว็บไซต์ถูกล็อคไว้</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1e1e2f;
+      --accent-color: #d62828;
+      --light-accent: #fcbf49;
+      --text-color: #f1f1f1;
+      --bg-color: #121212;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Prompt', sans-serif;
+      background: linear-gradient(135deg, var(--primary-color), var(--bg-color));
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(30, 30, 47, 0.95);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.1);
+      max-width: 90%;
+      width: 420px;
+      animation: fadeIn 1s ease-in-out;
+      border: 2px solid var(--accent-color);
+      position: relative;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      bottom: -10px;
+      left: -10px;
+      border: 2px dashed var(--light-accent);
+      border-radius: 20px;
+      pointer-events: none;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    img {
+      width: 70px;
+      margin-bottom: 1rem;
+      filter: grayscale(100%);
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--light-accent);
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">   
+        404
+    <h1>เว็บไซต์ถูกล็อคไว้ชั่วคราวนะงับ</h1>
+    <p>น้อง ม.4 ยังไม่ได้ทำคอนเท้นจากกติกาของค่าย</p>
+    <p>ถ้าส่งแล้วพี่จะปลดล็อคเว็บไซต์ให้นะ</p>
+  </div>
+</body>
+
+</html>
